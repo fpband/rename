@@ -13,7 +13,7 @@ async def ping_handler(c: Client, m: "types.Message"):
     await add_user_to_database(c, m)
     await c.send_flooded_message(
         chat_id=m.chat.id,
-        text="Hi, I am Rename Bot!\n\n"
+        text="Hi, I am Rename Bot!\n"
              "I can rename media without downloading it!\n"
              "Speed depends on your media DC.\n\n"
              "Just send me media and reply to it with /rename command.",
@@ -33,9 +33,9 @@ async def help_handler(c: Client, m: "types.Message"):
         chat_id=m.chat.id,
         text="I can rename media without downloading it!\n"
              "Speed depends on your media DC.\n\n"
-             "Just send me media and reply to it with /rename command.\n\n"
-             "To set custom thumbnail reply to any image with /set_thumbnail\n\n"
-             "To see custom thumbnail press /show_thumbnail",
+             "● Just send me media and reply to it with /rename command.\n"
+             "● To set custom thumbnail reply to any image with /set_thumbnail\n"
+             "● To see custom thumbnail press /show_thumbnail",
         reply_markup=types.InlineKeyboardMarkup([[
            types.InlineKeyboardButton("Show Settings",
                                       callback_data="showSettings")]])
